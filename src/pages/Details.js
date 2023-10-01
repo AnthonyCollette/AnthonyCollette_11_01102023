@@ -5,6 +5,7 @@ import data from '../data/data';
 import Tag from '../components/Tag';
 import Accordion from '../components/Accordion';
 import Stars from '../components/Stars';
+import Slider from '../components/Slider';
 
 const Details = () => {
 
@@ -23,7 +24,7 @@ const Details = () => {
     return (
         <div className='product'>
             {isLoading ? '' : <div className='container'>
-                <Header height='big' imgSrc={product?.cover} />
+                <Slider images={product?.pictures} />
                 <div className='product__infos'>
                     <div className='product__infos--column'>
                         <h1>{product?.title}</h1>

@@ -6,10 +6,15 @@
     overflow: hidden;
     margin: 0 auto 20px;
     max-width: 100%;
+    transition: all 0.2s ease-in-out;
 
     @media screen and (min-width: 768px) {
         aspect-ratio: 1;
         // margin: 25px;
+    }
+
+    &:hover {
+        box-shadow: 5px 5px 5px rgba($color: $color-004, $alpha: 0.5);
     }
 
     a {
