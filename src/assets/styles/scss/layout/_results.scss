@@ -1,0 +1,23 @@
+.results {
+    margin: 20px auto 27px;
+    border-radius: 25px;
+    // display: flex;
+    // flex-wrap: wrap;
+    display: grid;
+
+
+    @media screen and (min-width: 768px) {
+        margin: 43px auto 50px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width: 992px) {
+        gap: 30px;
+        padding: 50px;
+        background-color: $color-003;
+    }
+
+    @media screen and (min-width: 1300px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

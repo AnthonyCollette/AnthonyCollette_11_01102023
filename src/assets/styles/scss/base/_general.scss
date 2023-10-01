@@ -1,0 +1,22 @@
+body {
+    font-family: $font-001;
+    font-size: $font-md;
+}
+
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.img-wrapper {
+    position: relative;
+    &__overlay {
+        position: absolute;
+        inset: 0;
+    }
+}

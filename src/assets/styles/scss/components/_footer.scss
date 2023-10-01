@@ -1,0 +1,14 @@
+footer {
+    background-color: $color-004;
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 66px 0 30px;
+    }
+    p {
+        color: $color-002;
+        margin-top: 30px;
+    }
+}

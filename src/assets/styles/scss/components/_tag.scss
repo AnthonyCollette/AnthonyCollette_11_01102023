@@ -1,0 +1,17 @@
+.tags {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background-color: $color-001;
+    color: $color-002;
+    width: fit-content;
+    padding: 5px 40px;
+    border-radius: 10px;
+    margin-right: 10px;
+    font-size: $font-sm;
+    margin-bottom: 10px;
+}
