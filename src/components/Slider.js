@@ -74,7 +74,6 @@ const Slider = ({ images }) => {
                     {images?.map((image, index) => <div className='slider__slide img-wrapper' key={index}>
                         <img src={image} alt={image} />
                         {images?.length > 1 ? <p>{index + 1}/{images?.length}</p> : ''}
-
                     </div>)}
                 </div>
 

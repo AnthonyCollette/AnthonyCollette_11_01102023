@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import Header from '../components/Header';
+import { redirect, useParams, Navigate } from 'react-router-dom';
 import data from '../data/data';
 import Tag from '../components/Tag';
 import Accordion from '../components/Accordion';
@@ -12,18 +11,31 @@ const Details = () => {
     let params = useParams()
     const [product, setProduct] = useState('')
     const [isLoading, setIsLoading] = useState(false)
+    const [shouldRedirect, setShouldRedirect] = useState(false)
+    const [checkIfExists, setCheckIfExists] = useState(true)
 
+
+    useEffect(() => {
+        if (data.find((product) => product.id === params.id) === undefined) {
+            setShouldRedirect(true)
+            setCheckIfExists(true)
+        } else {
+            setCheckIfExists(true)
+        }
+        
+    }, [])
 
     useEffect(() => {
         setIsLoading(true)
         let foundProduct = data.find((product) => product.id === params.id)
         setProduct(foundProduct)
         setIsLoading(false)
-    }, [])
+    }, [checkIfExists])
 
     return (
         <div className='product'>
-            {isLoading ? '' : <div className='container'>
+            {shouldRedirect && <Navigate replace to="/error-404" />}
+            {!isLoading && product !== '' ?  <div className='container'>
                 <Slider images={product?.pictures} />
                 <div className='product__infos'>
                     <div className='product__infos--column'>
@@ -44,10 +56,10 @@ const Details = () => {
                     </div>
                 </div>
                 <div className='accordions'>
-                    <Accordion title="Description" text={product?.description} key={'description'}/>
-                    <Accordion title="Equipements" list={product?.equipments} key={'equipments'}/>
+                    <Accordion title="Description" text={product?.description} key={'description'} />
+                    <Accordion title="Equipements" list={product?.equipments} key={'equipments'} />
                 </div>
-            </div>}
+            </div> : ''}
 
         </div>
     );

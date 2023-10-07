@@ -14,7 +14,9 @@ function App() {
             <Route path="/" element={<Layout />}>
               <Route index element={<Homepage />} />
               <Route path="/details/:id" element={<Details />} />
+              <Route path="/details/*" element={<Error404 />} />
               <Route path="/about" element={<About />} />
+              <Route path="/error-404" element={<Error404 />} />
               <Route path="*" element={<Error404 />} />
             </Route>
           </Routes>
