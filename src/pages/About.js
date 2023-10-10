@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Header from '../components/Header.js';
+import Banner from '../components/Banner.js';
 import image from '../assets/images/Image source 2.png';
 import Accordion from '../components/Accordion.js';
 
@@ -22,7 +22,7 @@ const About = () => {
     return (
         <div className='about'>
             <div className='container'>
-                <Header height='small' imgSrc={image} />
+                <Banner height='small' imgSrc={image} />
                 {faq.map((point, index) => <Accordion key={index} title={point.title} text={point.content} />)}
             </div>
         </div>
