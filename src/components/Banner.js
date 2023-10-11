@@ -3,7 +3,7 @@ import React from 'react';
 const Banner = ({ height, imgSrc, overlay }) => {
 
     return (
-        <header className='banner'>
+        <section className='banner'>
             <div className={'banner__wrapper ' + height}>
                 <img src={imgSrc} alt="Bannière" />
                 {overlay ? <div className='overlay'>
@@ -12,7 +12,7 @@ const Banner = ({ height, imgSrc, overlay }) => {
                     </h1>
                 </div> : ''}
             </div>
-        </header>
+        </section>
     );
 };
 

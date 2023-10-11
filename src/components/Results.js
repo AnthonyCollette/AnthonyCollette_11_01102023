@@ -5,9 +5,9 @@ import data from '../data/data.js';
 const Results = () => {
 
     return (
-        <div className='results'>
+        <section className='results'>
                 {data.map((item, index) => <Preview key={index} title={item.title} imageSrc={item.cover} id={item.id}/>)}
-        </div>
+        </section>
     );
 };
 

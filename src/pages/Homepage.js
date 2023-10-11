@@ -6,12 +6,12 @@ import image from '../assets/images/Image source 1.png';
 const Homepage = () => {
 
     return (
-        <div className='homepage'>
+        <main className='homepage'>
             <div className='container'>
                 <Banner height='small' imgSrc={image} overlay={true} />
                 <Results />
             </div>
-        </div>
+        </main>
     );
 };
 

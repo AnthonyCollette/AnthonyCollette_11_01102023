@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Preview = ({ title, imageSrc, id }) => {
 
-    const [url, setUrl] = useState()
-
     return (
-        <div className='preview'>
+        <article className='preview'>
             <Link to={`/details/${id}`}>
                 <div className="img-wrapper">
                     <img src={imageSrc} alt="Prévisualisation du logement" />
@@ -15,7 +13,7 @@ const Preview = ({ title, imageSrc, id }) => {
                     </div>
                 </div>
             </Link>
-        </div>
+        </article>
     );
 };
 
