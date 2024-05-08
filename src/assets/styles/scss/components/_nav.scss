@@ -13,28 +13,30 @@ header {
     }
     li {
         font-family: $font-001;
-        font-size: $font-xs;
+        font-size: $font-xxs;
         color: $color-001;
         margin-left: 26px;
         cursor: pointer;
+        text-transform: uppercase;
 
         @media screen and (min-width: 576px) {
-            font-size: $font-md;
+            text-transform: none;
+            font-size: $font-xs;
         }
         @media screen and (min-width: 768px) {
             font-size: $font-lg;
             margin-left: 57px;
         }
 
-        a:visited {
-            color: $color-001;
+        a {
+            color: $color-004;
         }
         .active {
             text-decoration: underline;
         }
     }
     svg {
-        width: 145px;
+        width: 105px;
         @media screen and (min-width: 576px) {
             width: 210px;
         }
